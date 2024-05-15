@@ -3,11 +3,17 @@ project(Mimikyu C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(src)
+include_directories(include)
 
-add_library(Mimikyu STATIC src/mimikyu.h
-                           src/mimikyu/string.h
+set(MIMIKYU_HEADER      src/mimikyu.h
+                        src/mimikyu/string.h)
+
+add_library(Mimikyu STATIC ${MIMIKYU_HEADER}
                            src/mimikyu.c)
 
-install(TARGETS Mimikyu ARCHIVE DESTINATION lib
-                        PUBLIC_HEADER DESTINATION include)
+set_target_properties(Mimikyu PROPERTIES PUBLIC_HEADER "${MIMIKYU_HEADER}")
+
+install(TARGETS Mimikyu ARCHIVE DESTINATION "${CMAKE_INSTALL_PREFIX}/lib")
+
+install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/src/ DESTINATION "${CMAKE_INSTALL_PREFIX}/include"
+                  FILES_MATCHING PATTERN "*.h")
