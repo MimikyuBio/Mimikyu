@@ -15,12 +15,11 @@
 #define mimikyu_version_minor           0
 #define mimikyu_version_revision        1
 
-#define mimikyu_success                 0
-#define mimikyu_fail                    -1
 
-#define mimikyu_true                    1
-#define mimikyu_false                   0
-
+#define true                            1
+#define false                           0
+#define success                         0
+#define fail                            -1
 #define nil                             ((void *) 0)
 
 extern const char * mimikyu_version_str(void);
