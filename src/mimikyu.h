@@ -18,6 +18,11 @@
 #define mimikyu_success                 0
 #define mimikyu_fail                    -1
 
+#define mimikyu_true                    1
+#define mimikyu_false                   0
+
 extern const char * mimikyu_version_str(void);
+
+#define mimikyu_string_init(string)         (string[0] = 0)
 
 #endif // __MIMIKYU_H__
