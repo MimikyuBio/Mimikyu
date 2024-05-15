@@ -21,6 +21,8 @@
 #define mimikyu_true                    1
 #define mimikyu_false                   0
 
+#define nil                             ((void *) 0)
+
 extern const char * mimikyu_version_str(void);
 
 #define mimikyu_string_init(string)         (string[0] = 0)
