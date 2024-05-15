@@ -8,3 +8,6 @@ include_directories(src)
 add_library(Mimikyu STATIC src/mimikyu.h
                            src/mimikyu/string.h
                            src/mimikyu.c)
+
+
+install(TARGETS Mimikyu DESTINATION lib)
