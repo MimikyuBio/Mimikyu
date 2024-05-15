@@ -5,8 +5,7 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(include)
 
-set(MIMIKYU_HEADER      src/mimikyu.h
-                        src/mimikyu/string.h)
+set(MIMIKYU_HEADER      src/mimikyu.h)
 
 add_library(Mimikyu STATIC ${MIMIKYU_HEADER}
                            src/mimikyu.c)
