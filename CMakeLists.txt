@@ -9,5 +9,5 @@ add_library(Mimikyu STATIC src/mimikyu.h
                            src/mimikyu/string.h
                            src/mimikyu.c)
 
-
-install(TARGETS Mimikyu DESTINATION lib)
+install(TARGETS Mimikyu ARCHIVE DESTINATION lib
+                        PUBLIC_HEADER DESTINATION include)
